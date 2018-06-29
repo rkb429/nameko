@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from home import viwes
+from home import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^keayboard/', viwes.keyboard),
+    url(r'^keayboard/', views.keyboard),
 ]
