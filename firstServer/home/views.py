@@ -30,3 +30,15 @@ def message(request):
                 "text": "안녕하세요"
             }
         })
+     if return_str == '선택 2':
+        return JsonResponse({ #return 밑에는 공통어
+            "message": {
+                "text": "돈필요해요"
+            }
+        })
+     if return_str == '선택 3':
+        return JsonResponse({ #return 밑에는 공통어
+            "message": {
+                "text": "돈줘요"
+            }
+        })
