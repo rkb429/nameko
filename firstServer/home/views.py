@@ -46,4 +46,5 @@ def wether():
     params = {"version": "1", "city":"서울", "county":"광진구","village":"군자동"}
     headers = {"appKey": "f920a656-4102-4024-90e6-92092c1dcf03"}
     response = requests.get("https://api2.sktelecom.com/weather/current/minutely", params=params, headers=headers)
-    return response
+    data = json.loads(response.text)
+    return data
