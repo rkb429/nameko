@@ -7,6 +7,8 @@ import urllib.request
 import json
 import datetime
 import requests
+
+
 def keyboard(request):
     return JsonResponse(
         {
@@ -14,6 +16,8 @@ def keyboard(request):
             "buttons" : ["선택 1", "선택 2", "선택 3"]
         }   
     )
+
+
 @csrf_exempt
 def message(request):
     message = ((request.body).decode('utf-8'))
