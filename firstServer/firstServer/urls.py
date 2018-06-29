@@ -19,5 +19,5 @@ from home import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^keayboard/', views.keyboard),
+    url(r'^keayboard', views.keyboard),
 ]
