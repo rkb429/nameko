@@ -27,7 +27,7 @@ def message(request):
     if return_str == '선택 1':
         return JsonResponse({ #return 밑에는 공통어
             "message": {
-                "text": "안녕하세요"
+                def wether():
             }
         })
     if return_str == '선택 2':
@@ -42,3 +42,8 @@ def message(request):
                 "text": "돈줘요"
             }
         })
+def wether():
+    params = {"version": "1", "city":"서울", "county":"광진구","village":"군자동"}
+    headers = {"appKey": "f920a656-4102-4024-90e6-92092c1dcf03"}
+    response = requests.get("https://api2.sktelecom.com/weather/current/minutely", params=params, headers=headers)
+    return response
